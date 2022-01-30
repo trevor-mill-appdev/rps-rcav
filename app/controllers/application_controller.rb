@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  layout(false)
+  layout("wrapper.html.erb")
 
   # Add your actions below this line
   # ================================
@@ -43,6 +43,7 @@ class ApplicationController < ActionController::Base
     elsif @comp_move == "scissors"
       @outcome = "tied"
     end
-    render{{ :template => "game_templates/user_scissors.html.erb"}}
+    render({ :template => "game_templates/user_scissors.html.erb"})
   end
+
 end
